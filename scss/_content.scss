@@ -1,0 +1,322 @@
+header{
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  padding: 10px 0;
+}
+body{
+  overflow-x:hidder;
+  background-image: url(../multimedia/background/bgbase.jpg)
+}
+/*______________________- Seccion Intro -______________________*/
+.impala-intro{
+  height: 50rem;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../multimedia/background/bg1.jpg);
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns:repeat(6, 1fr);
+  grid-template-rows:repeat(6, 15vh) ;
+  grid-template-areas: 
+  ".  .    .       introg introg introg"
+  "cg  cg    cg    introg introg introg"
+  "cg  cg    cg    introg introg introg"
+  "cg  cg    cg    introg introg introg"
+  "cg  cg    cg    introg introg introg"
+  ".  .    .       introg introg introg"
+  ;
+  .cg{
+    grid-area: cg;
+  }
+  /*-----Texto Principal-----*/
+  .introg{
+    grid-area: introg;
+    color: $mainColor;
+    @include orgSection (10rem,3rem,0,3rem,$mainFont,1.5rem,$textLight,2rem,justify,0,0,none);
+  }
+  /*----Carousel----*/
+  .carousel{
+    .carousel-inner{
+      padding: 0rem 2rem;
+      padding-top: 4rem;
+      .carousel-item{
+
+      }
+      img{
+        width: 100%;
+        min-height: 34rem;
+        max-height: 34rem;
+        object-fit: cover;
+      }
+    } 
+    
+  }
+}
+//novedades
+/*______________________- Seccion Novedades -______________________*/
+.impala-nov{
+  height: 150rem;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../multimedia/background/bg8.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-rows: 40vh 60vh 100vh;
+  grid-template-areas: 
+  "icong icong icong"
+  "susg susg susg"
+  "leakg leakg leakg"
+  ;
+  /*--Grid Areas--*/
+  .icong{
+    grid-area: icong;
+  }
+  .susg{
+    grid-area: susg;
+  }
+  .leakg{
+    grid-area: leakg;
+  }
+  /*--*/
+  /*--- Logos Music ---*/
+  .logo-music{
+    @include ajustCenter(7rem,0,space-evenly);
+    a img{
+      width: 11.5rem;
+      height: 11.5rem;
+    }
+  }
+  /*--- Suscripcion ---*/
+  .suscription{
+    color: $mainColor;
+    @include orgSection (0,15%,0,15%,$secondaryFont,1.4rem,$textRegular,2rem,center,0,0,0);
+    h3{
+      padding-bottom: 5%;
+    }
+    form {
+      label {
+        @include ajustCenter(0,8%,center);
+      }
+      .input-submit{
+        @include ajustCenter(8%,0,center);
+        .text-sub{
+          background-color: rgb(0, 1, 2);
+        }
+        .input-sub{
+          background-color: rgb(0, 1, 2);
+        }
+      }
+    }
+  }
+  /*--- New Leaks ---*/
+  .leakg{
+    .new-leak-text{
+      @include ajustCenter(0,0,center);
+    }
+    .video-leak{
+      justify-content: center;
+      align-content: center;
+      overflow: hidden;
+    }
+  }
+}
+/*______________________- Seccion Tour -______________________*/
+.impala-tour{
+  display: grid;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/background/bg3.jpg);
+  background-size: cover;
+  height: 90rem;
+  grid-template-columns:repeat (3, 1fr);
+  grid-template-rows: 15vh 35vh 35vh 20vh;
+  grid-template-areas:
+  "h3-tour h3-tour h3-tour"
+  "tourg1 tourg2 tourg3 "
+  "tourg4 tourg5 tourg6"
+  "button-tour button-tour button-tour "
+  ;
+}
+.h3-tour{
+  grid-area: h3-tour;
+  position: relative;
+  padding-top: 4rem;
+  justify-content: center;
+  text-align: center;
+  background: rgb(0,0,0);
+  width: 100%;
+}
+.tourg1{
+  grid-area: tourg1;
+  @include orgSection (15%,0,0,0,$mainFont,2rem,$textBold,2.2rem,center,0,0, none);
+}
+.tourg2{
+  grid-area: tourg2;
+  @include orgSection (15%,0,0,0,$mainFont,2rem,$textBold,2.2rem,center,0,0, none);
+}
+.tourg3{
+  grid-area: tourg3;
+  @include orgSection (15%,0,0,0,$mainFont,2rem,$textBold,2.2rem,center,0,0, none);
+}
+.tourg4{
+  grid-area: tourg4;
+  @include orgSection (15%,0,0,0,$mainFont,2rem,$textBold,2.2rem,center,0,0, none);
+}
+.tourg5{
+  grid-area: tourg5;
+  @include orgSection (15%,0,0,0,$mainFont,2rem,$textBold,2.2rem,center,0,0, none);
+}
+.tourg6{
+  grid-area: tourg6;
+  @include orgSection (15%,0,0,0,$mainFont,2rem,$textBold,2.2rem,center,0,0, none);
+}
+#entradas{
+  grid-area: entradas;
+  @include button(0rem,0.5rem);
+  font-family:$mainFont;
+  font-weight: $textBold;
+  text-transform: uppercase;
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+}
+#button-tour{
+  grid-area: button-tour;
+  display: flex;
+  @include button(0rem,10rem);
+}
+/*______________________- Seccion Merch -______________________*/
+.impala-merch{  
+  background-size: cover;
+  display: grid;
+  color:$mainColor ;
+
+  font-family: $mainFont;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+.h3-merch{
+  grid-area: h3-merch;
+  padding-top: 4rem;
+  justify-content: center;
+  text-align: center;
+  background: rgb(0,0,0);
+  width: 100%;
+}
+
+.button-merch{
+  grid-area: button-merch;
+  display: flex;
+  @include button(0rem,0.5rem);
+}
+.zoom{
+  transition: transform 0.2s; 
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+/*__________ Discografia*_____________*/
+.discs{
+  display:grid;
+  ;
+  .card {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0,0,0,1);
+    
+    .image-merch { 
+      @include imageMerch(1,block,.5s ease,hidden,1);
+    }
+    .middle-merch {
+      @include middleMerch(.5s ease,0,absolute,50%,50%,(translate(-50%, -50%)),(translate(-50%, -50%)),center,2)
+    }
+    .text-merch { 
+      @include textMerch(pre-wrap,$mainColor,absolute,0,50%,50%,translate(-50%, -50%),translate(-50%, -50%),2rem,$mainFont,uppercase,$textBold);
+      font-weight: $textBold;
+    }
+    img{
+      max-width: 300px;
+      min-width: 299px;
+      height: 300px;
+    }
+    .zoom{
+      transition: transform 0.5as; 
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.h1-d{
+ grid-area:h1-d;
+}
+.disc-1{
+ grid-area:disc-1;
+}
+.disc-2{
+ grid-area:disc-2;
+}
+.disc-3{
+ grid-area:disc-3;
+}
+.disc-4{
+ grid-area:disc-4;
+}
+.disc-5{
+ grid-area:disc-5;
+}
+.disc-6{
+ grid-area:disc-6;
+}
+.disc-7{
+ grid-area:disc-7;
+}
+.disc-8{
+ grid-area:disc-8;
+}
+/*______________________- Footer -______________________*/
+.footerg{
+  width: 100%;
+  display: grid;
+  justify-items:center;
+  @include orgSection (7em,0,7em,0,$mainFont,1.1rem,$textLight,0,0,space-around,center, rgb(0,0,0));
+}
+.pie-img{
+  width: 17.25em;
+  height: 9.06em;
+}
+.pie-socialmedia a img{
+  justify-items: space-evenly;
+  width: 4em;
+  height: 4em; 
+  background-color: $secondaryColor;
+}
+
+.price {
+  .nowrap{
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    background-color: rgb(0 0 0/var(--tw-bg-opacity));
+    border-color: rgb(212 212 212/var(--tw-border-opacity));
+    border-radius: 0.5rem;
+    border-width: 1px;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    color: rgb(212 212 212/var(--tw-text-opacity));
+    display: block;
+    font-family: $secondaryFont, sans-serif;
+    font-size: .75rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    transition-duration: .15s;
+    transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);}
+  }
+
+
